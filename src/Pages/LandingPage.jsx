@@ -9,9 +9,15 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../AuthContext/AuthContext";
 
 export default function LandingPage() {
+  const { authstate, authDispatch } = useContext(AuthContext);
+
+  console.log("object", authstate?.result);
+
   return (
     <>
       <br />
@@ -53,8 +59,8 @@ export default function LandingPage() {
           <Box boxShadow={"md"}>
             <VStack overflow="hidden">
               <Image
-                 _hover={{ transform: "scale(1.2)", transformOrigin: "50% 50%" }}
-                 transition="transform .5s"
+                _hover={{ transform: "scale(1.2)", transformOrigin: "50% 50%" }}
+                transition="transform .5s"
                 src="https://mohit-foodstore.netlify.app/assets/trending.jpg"
                 borderRadius={"10px"}
               />
@@ -68,8 +74,8 @@ export default function LandingPage() {
         <Box boxShadow={"md"}>
           <VStack overflow="hidden">
             <Image
-               _hover={{ transform: "scale(1.2)", transformOrigin: "50% 50%" }}
-               transition="transform .5s"
+              _hover={{ transform: "scale(1.2)", transformOrigin: "50% 50%" }}
+              transition="transform .5s"
               src="https://mohit-foodstore.netlify.app/assets/search.jpg"
               borderRadius={"10px"}
             />
@@ -79,22 +85,22 @@ export default function LandingPage() {
             <br />
           </VStack>
         </Box>
-        <Link to='/mealday'>
-        <Box boxShadow={"md"}>
-          <VStack overflow="hidden">
+        <Link to="/mealday">
+          <Box boxShadow={"md"}>
+            <VStack overflow="hidden">
               <Image
-                 _hover={{ transform: "scale(1.2)", transformOrigin: "50% 50%" }}
-                 transition="transform .5s"
-              src="https://mohit-foodstore.netlify.app/assets/cart.jpg"
-              borderRadius={"10px"}
-            />
-            <Text fontSize={"20px"} pt="3">
-              Meal of the Day
-            </Text>
-            <br />
-          </VStack>
-        </Box>
-              </Link>
+                _hover={{ transform: "scale(1.2)", transformOrigin: "50% 50%" }}
+                transition="transform .5s"
+                src="https://mohit-foodstore.netlify.app/assets/cart.jpg"
+                borderRadius={"10px"}
+              />
+              <Text fontSize={"20px"} pt="3">
+                Meal of the Day
+              </Text>
+              <br />
+            </VStack>
+          </Box>
+        </Link>
       </Grid>
       <br />
       <br />

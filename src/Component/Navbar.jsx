@@ -40,11 +40,17 @@ export default function Navbar() {
 
   const { authState, authDispatch } = useContext(AuthContext);
 
-  // let a = Object?.keys(authState?.result)?.length;
 
   const handlenav = () => {
     navigate("/cart");
   };
+
+  const handleSignout = () => {
+    authDispatch({type:"SIGN_OUT"})
+  }
+
+
+  console.log("akshay",authState?.result)
 
   return (
     <>
@@ -107,7 +113,8 @@ export default function Navbar() {
                 >
                   <Avatar
                     size={"sm"}
-                    src={"https://avatars.dicebear.com/api/male/username.svg"}
+                      src={authState?.result?.user?.photoURL}
+                      name='Akshay Rajput'
                   />
                 </MenuButton>
                 <MenuList alignItems={"center"}>
@@ -115,12 +122,16 @@ export default function Navbar() {
                   <Center>
                     <Avatar
                       size={"2xl"}
-                      src={"https://avatars.dicebear.com/api/male/username.svg"}
+                        src={authState?.result?.user?.photoURL}
+                        name='Akshay Rajput'
                     />
                   </Center>
                   <br />
                   <Center>
-                    <Text>Username</Text>
+                      <Text>{ `${authState?.result?.user?.displayName || authState?.result?.user?.phoneNumber}` }</Text>
+                    </Center>
+                    <Center mt='2'>
+                      <Text>{ authState?.result?.user?.email}</Text>
                   </Center>
                   <br />
                   <MenuDivider />
@@ -128,7 +139,7 @@ export default function Navbar() {
                     <Link to="/cart">Cart</Link>
                   </MenuItem>
                   <MenuItem>Account Settings</MenuItem>
-                  <MenuItem>Logout</MenuItem>
+                  <MenuItem onClick={handleSignout}>Logout</MenuItem>
                 </MenuList>
               </Menu>
             )}
