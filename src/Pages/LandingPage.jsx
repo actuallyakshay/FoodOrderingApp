@@ -42,12 +42,17 @@ export default function LandingPage() {
         <Link to="/foodlist">
           <Box boxShadow={"md"}>
             <VStack overflow="hidden">
-              <Image
-                src="https://mohit-foodstore.netlify.app/assets/foodmenu.jpg"
-                borderRadius={"10px"}
-                _hover={{ transform: "scale(1.2)", transformOrigin: "50% 50%" }}
-                transition="transform .5s"
-              />
+              <Box overflow="hidden">
+                <Image
+                  src="https://mohit-foodstore.netlify.app/assets/foodmenu.jpg"
+                  borderRadius={"10px"}
+                  _hover={{
+                    transform: "scale(1.2)",
+                    transformOrigin: "50% 50%",
+                  }}
+                  transition="transform .5s"
+                />
+              </Box>
               <Text fontSize={"20px"} pt="3">
                 Food Menu
               </Text>
@@ -58,12 +63,17 @@ export default function LandingPage() {
         <Link to="/trendingpage">
           <Box boxShadow={"md"}>
             <VStack overflow="hidden">
-              <Image
-                _hover={{ transform: "scale(1.2)", transformOrigin: "50% 50%" }}
-                transition="transform .5s"
-                src="https://mohit-foodstore.netlify.app/assets/trending.jpg"
-                borderRadius={"10px"}
-              />
+              <Box overflow="hidden">
+                <Image
+                  _hover={{
+                    transform: "scale(1.2)",
+                    transformOrigin: "50% 50%",
+                  }}
+                  transition="transform .5s"
+                  src="https://mohit-foodstore.netlify.app/assets/trending.jpg"
+                  borderRadius={"10px"}
+                />
+              </Box>
               <Text fontSize={"20px"} pt="3">
                 Trending Food
               </Text>
@@ -73,12 +83,14 @@ export default function LandingPage() {
         </Link>
         <Box boxShadow={"md"}>
           <VStack overflow="hidden">
-            <Image
-              _hover={{ transform: "scale(1.2)", transformOrigin: "50% 50%" }}
-              transition="transform .5s"
-              src="https://mohit-foodstore.netlify.app/assets/search.jpg"
-              borderRadius={"10px"}
-            />
+            <Box  overflow="hidden">
+              <Image
+                _hover={{ transform: "scale(1.2)", transformOrigin: "50% 50%" }}
+                transition="transform .5s"
+                src="https://mohit-foodstore.netlify.app/assets/search.jpg"
+                borderRadius={"10px"}
+              />
+            </Box>
             <Text fontSize={"20px"} pt="3">
               Search Food
             </Text>
@@ -88,12 +100,17 @@ export default function LandingPage() {
         <Link to="/mealday">
           <Box boxShadow={"md"}>
             <VStack overflow="hidden">
-              <Image
-                _hover={{ transform: "scale(1.2)", transformOrigin: "50% 50%" }}
-                transition="transform .5s"
-                src="https://mohit-foodstore.netlify.app/assets/cart.jpg"
-                borderRadius={"10px"}
-              />
+              <Box overflow="hidden">
+                <Image
+                  _hover={{
+                    transform: "scale(1.2)",
+                    transformOrigin: "50% 50%",
+                  }}
+                  transition="transform .5s"
+                  src="https://mohit-foodstore.netlify.app/assets/cart.jpg"
+                  borderRadius={"10px"}
+                />
+              </Box>
               <Text fontSize={"20px"} pt="3">
                 Meal of the Day
               </Text>

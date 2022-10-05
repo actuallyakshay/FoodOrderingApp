@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Heading,
   HStack,
@@ -27,14 +28,16 @@ export default function FoodBox({ elem, addCart }) {
       borderRadius={"10px"}
       overflow="hidden"
     >
-      <Image
-        src={elem?.strMealThumb}
-        w="100%"
-        borderTopLeftRadius={"8px"}
-        borderTopRightRadius={"8px"}
-        _hover={{ transform: "scale(1.2)", transformOrigin: "50% 50%" }}
-        transition="transform .5s"
-      />
+      <Box overflow="hidden">
+        <Image
+          src={elem?.strMealThumb}
+          w="100%"
+          borderTopLeftRadius={"8px"}
+          borderTopRightRadius={"8px"}
+          _hover={{ transform: "scale(1.2)", transformOrigin: "50% 50%" }}
+          transition="transform .5s"
+        />
+      </Box>
       <br />
       <Heading size="sm">{elem?.strMeal}</Heading>
       <Text>{elem?.type}</Text>
