@@ -19,6 +19,7 @@ import {
   Text,
   Center,
   Image,
+  useToast,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { Navigate, NavLink, useNavigate } from "react-router-dom";
@@ -37,20 +38,19 @@ export default function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const navigate = useNavigate();
+  const toast = useToast();
 
   const { authState, authDispatch } = useContext(AuthContext);
-
 
   const handlenav = () => {
     navigate("/cart");
   };
 
   const handleSignout = () => {
-    authDispatch({type:"SIGN_OUT"})
-  }
+    authDispatch({ type: "SIGN_OUT" });
+  };
 
-
-  console.log("akshay",authState?.result)
+  console.log("akshay", authState?.result);
 
   return (
     <>
@@ -60,7 +60,7 @@ export default function Navbar() {
         color={useColorModeValue("black", "white")}
         position={"sticky"}
         top="0px"
-        zIndex={'2'}
+        zIndex={"2"}
       >
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
@@ -113,25 +113,28 @@ export default function Navbar() {
                 >
                   <Avatar
                     size={"sm"}
-                      src={authState?.result?.user?.photoURL}
-                      name='Akshay Rajput'
+                    src={authState?.result?.user?.photoURL}
+                    name="Akshay Rajput"
                   />
                 </MenuButton>
-                <MenuList alignItems={"center"}>
+                <MenuList alignItems={"center"} p="5">
                   <br />
                   <Center>
                     <Avatar
                       size={"2xl"}
-                        src={authState?.result?.user?.photoURL}
-                        name='Akshay Rajput'
+                      src={authState?.result?.user?.photoURL}
+                      name="Akshay Rajput"
                     />
                   </Center>
                   <br />
                   <Center>
-                      <Text>{ `${authState?.result?.user?.displayName || authState?.result?.user?.phoneNumber}` }</Text>
-                    </Center>
-                    <Center mt='2'>
-                      <Text>{ authState?.result?.user?.email}</Text>
+                    <Text>{`${
+                      authState?.result?.user?.displayName ||
+                      authState?.result?.user?.phoneNumber
+                    }`}</Text>
+                  </Center>
+                  <Center mt="2">
+                    <Text>{authState?.result?.user?.email}</Text>
                   </Center>
                   <br />
                   <MenuDivider />
@@ -139,7 +142,19 @@ export default function Navbar() {
                     <Link to="/cart">Cart</Link>
                   </MenuItem>
                   <MenuItem>Account Settings</MenuItem>
-                  <MenuItem onClick={handleSignout}>Logout</MenuItem>
+                  <MenuItem
+                    onClick={() => {
+                      toast({
+                        title: "Logout Successfully !",
+                        status: "success",
+                        duration: 3000,
+                        isClosable: true,
+                      });
+                      handleSignout()
+                    }}
+                  >
+                    Logout
+                  </MenuItem>
                 </MenuList>
               </Menu>
             )}

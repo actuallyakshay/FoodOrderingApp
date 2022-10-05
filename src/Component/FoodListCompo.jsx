@@ -6,7 +6,7 @@ export default function FoodCompo() {
   return (
     <>
       <br />
-      <Flex w="90%" m="auto" gap='4' justifyContent={"flex-end"}>
+      <Flex w="90%" m="auto" gap='4' justifyContent={{base:'center' , md:"flex-end"}}>
         <Filter />
       </Flex>
       <FoodList />

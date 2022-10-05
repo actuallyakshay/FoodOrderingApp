@@ -1,9 +1,18 @@
-import { Button, Heading, HStack, Image, Text, VStack } from "@chakra-ui/react";
+import {
+  Button,
+  Heading,
+  HStack,
+  Image,
+  Text,
+  useToast,
+  VStack,
+} from "@chakra-ui/react";
 import { useState } from "react";
 import Star from "../Component/Star";
 
 export default function FoodBox({ elem, addCart }) {
   const [dis, setDis] = useState(true);
+  const toast = useToast();
 
   const handleCLick = (elem) => {
     setDis(!dis);
@@ -45,7 +54,25 @@ export default function FoodBox({ elem, addCart }) {
       <Button
         colorScheme={dis ? "orange" : "red"}
         w="90%"
-        onClick={() => handleCLick(elem)}
+        onClick={() => {
+          {
+            dis
+              ? toast({
+                  title: "Item added to cart",
+                  status: "success",
+                  duration: 2000,
+                  isClosable: true,
+                })
+              : toast({
+                  title: "Item remove from the cart",
+                  status: "error",
+                  duration: 2000,
+                  isClosable: true,
+                });
+          }
+
+          handleCLick(elem);
+        }}
       >
         {dis ? "Add to Cart" : "Remove from Cart"}
       </Button>

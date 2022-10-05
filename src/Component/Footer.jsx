@@ -21,12 +21,12 @@ export default function Footer() {
           Made with ❣️ by Akshay Rajput
         </Text>
         <Flex w="fit-content" gap="5" mt="5">
-          <Link>
+          <a href="https://www.linkedin.com/in/akshay-rajput-422794220">
             <Button colorScheme="linkedin">LinkedIn</Button>
-          </Link>
-          <Link>
+          </a>
+          <a href="https://github.com/actuallyakshay">
             <Button colorScheme="red">Github</Button>
-          </Link>
+          </a>
         </Flex>
       </Flex>
     </>

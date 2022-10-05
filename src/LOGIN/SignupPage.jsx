@@ -27,7 +27,7 @@ export default function LoginPage() {
       <br />
       <br />
       <Flex
-        w="40%"
+        w="55%"
         gap="5"
         alignItems={"center"}
         justifyContent={"center"}

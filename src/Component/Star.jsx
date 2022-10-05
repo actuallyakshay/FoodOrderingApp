@@ -1,7 +1,7 @@
 import { StarIcon } from "@chakra-ui/icons";
 
 export default function Star({ rating }) {
-  const arr = [1, 2, 3];
+  const arr = [1];
 
   return (
     <>
@@ -11,3 +11,4 @@ export default function Star({ rating }) {
     </>
   );
 }
+
