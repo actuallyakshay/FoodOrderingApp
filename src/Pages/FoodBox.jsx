@@ -8,12 +8,16 @@ import {
   useToast,
   VStack,
 } from "@chakra-ui/react";
+import { useContext } from "react";
 import { useState } from "react";
+import { AuthContext } from "../AuthContext/AuthContext";
 import Star from "../Component/Star";
 
 export default function FoodBox({ elem, addCart }) {
   const [dis, setDis] = useState(true);
   const toast = useToast();
+
+  const { authState } = useContext(AuthContext);
 
   const handleCLick = (elem) => {
     setDis(!dis);
@@ -61,7 +65,10 @@ export default function FoodBox({ elem, addCart }) {
           {
             dis
               ? toast({
-                  title: "Item added to cart",
+                // {
+                //   !authState.isAuth
+                // }
+                  title: `${authState.isAuth ? "Item added to cart" : "You have to login first"}`,
                   status: "success",
                   duration: 2000,
                   isClosable: true,
@@ -74,7 +81,17 @@ export default function FoodBox({ elem, addCart }) {
                 });
           }
 
-          handleCLick(elem);
+          // {
+            // 
+              // ? toast({
+              //     title: "You have to login first",
+              //     status: "error",
+              //     duration: 3000,
+              //     isClosable: false,
+              //   })
+              // :
+              handleCLick(elem);
+          // }
         }}
       >
         {dis ? "Add to Cart" : "Remove from Cart"}
