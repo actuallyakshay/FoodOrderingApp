@@ -20,6 +20,7 @@ const data = [
     strCategory: "Dessert",
     price: "376",
     rating: " 2.4",
+    q: 1,
   },
   {
     strMealThumb:
@@ -28,6 +29,7 @@ const data = [
     strCategory: "Chicken",
     price: "365",
     rating: " 1.2",
+    q: 1,
   },
   {
     strMealThumb:
@@ -36,6 +38,7 @@ const data = [
     strCategory: "Starter",
     price: "379",
     rating: " 4.5",
+    q: 1,
   },
   {
     strMealThumb:
@@ -44,6 +47,7 @@ const data = [
     strCategory: "Dessert",
     price: "388",
     rating: " 2.6",
+    q: 1,
   },
   {
     strMealThumb:
@@ -52,6 +56,7 @@ const data = [
     strCategory: "Chicken",
     price: "395",
     rating: " 2.7",
+    q: 1,
   },
   {
     strMealThumb:
@@ -60,6 +65,7 @@ const data = [
     strCategory: "Chicken",
     price: "396",
     rating: " 4.2",
+    q: 1,
   },
   {
     strMealThumb:
@@ -68,6 +74,7 @@ const data = [
     strCategory: "Chicken",
     price: "418",
     rating: " 1.5",
+    q: 1,
   },
   {
     strMealThumb:
@@ -76,6 +83,7 @@ const data = [
     strCategory: "Seafood",
     price: "419",
     rating: " 2.3",
+    q: 1,
   },
   {
     strMealThumb:
@@ -84,6 +92,7 @@ const data = [
     strCategory: "Chicken",
     price: "430",
     rating: " 3.2",
+    q: 1,
   },
   {
     strMealThumb:
@@ -92,6 +101,7 @@ const data = [
     strCategory: "Chicken",
     price: "431",
     rating: " 3.1",
+    q: 1,
   },
   {
     strMealThumb:
@@ -100,6 +110,7 @@ const data = [
     strCategory: "Chicken",
     price: "432",
     rating: " 3.7",
+    q: 1,
   },
   {
     strMealThumb:
@@ -108,6 +119,7 @@ const data = [
     strCategory: "Pasta",
     price: "439",
     rating: " 4",
+    q: 1,
   },
   {
     strMealThumb:
@@ -116,6 +128,7 @@ const data = [
     strCategory: "Starter",
     price: "440",
     rating: " 3.8",
+    q: 1,
   },
   {
     strMealThumb:
@@ -124,6 +137,7 @@ const data = [
     strCategory: "Starter",
     price: "441",
     rating: " 4.3",
+    q: 1,
   },
   {
     strMealThumb:
@@ -132,6 +146,7 @@ const data = [
     strCategory: "Chicken",
     price: "446",
     rating: " 3.6",
+    q: 1,
   },
   {
     strMealThumb:
@@ -140,6 +155,7 @@ const data = [
     strCategory: "Chicken",
     price: "450",
     rating: " 4.6",
+    q: 1,
   },
   {
     strMealThumb:
@@ -148,6 +164,7 @@ const data = [
     strCategory: "Dessert",
     price: "453",
     rating: " 1.4",
+    q: 1,
   },
   {
     strMealThumb:
@@ -156,6 +173,7 @@ const data = [
     strCategory: "Dessert",
     price: "456",
     rating: " 2.1",
+    q: 1,
   },
   {
     strMealThumb:
@@ -164,6 +182,7 @@ const data = [
     strCategory: "Dessert",
     price: "460",
     rating: " 1.4",
+    q: 1,
   },
   {
     strMealThumb:
@@ -172,6 +191,7 @@ const data = [
     strCategory: "Vegetarian",
     price: "470",
     rating: " 1.2",
+    q: 1,
   },
   {
     strMealThumb:
@@ -180,6 +200,7 @@ const data = [
     strCategory: "Chicken",
     price: "475",
     rating: " 3.9",
+    q: 1,
   },
   {
     strMealThumb:
@@ -188,6 +209,7 @@ const data = [
     strCategory: "Chicken",
     price: "479",
     rating: " 1.6",
+    q: 1,
   },
   {
     strMealThumb:
@@ -196,6 +218,7 @@ const data = [
     strCategory: "Dessert",
     price: "497",
     rating: " 1.4",
+    q: 1,
   },
   {
     strMealThumb:
@@ -204,6 +227,7 @@ const data = [
     strCategory: "Dessert",
     price: "498",
     rating: " 3.7",
+    q: 1,
   },
   {
     strMealThumb:
@@ -212,6 +236,7 @@ const data = [
     strCategory: "Dessert",
     price: "505",
     rating: " 2.3",
+    q: 1,
   },
   {
     strMealThumb:
@@ -220,6 +245,7 @@ const data = [
     strCategory: "Dessert",
     price: "510",
     rating: " 3.4",
+    q: 1,
   },
   {
     strMealThumb:
@@ -228,6 +254,7 @@ const data = [
     strCategory: "Chicken",
     price: "520",
     rating: " 1.4",
+    q: 1,
   },
   {
     strMealThumb:
@@ -236,6 +263,7 @@ const data = [
     strCategory: "Dessert",
     price: "523",
     rating: " 4.2",
+    q: 1,
   },
   {
     strMealThumb:
@@ -244,6 +272,7 @@ const data = [
     strCategory: "Chicken",
     price: "534",
     rating: " 2.7",
+    q: 1,
   },
   {
     strMealThumb:
@@ -252,6 +281,7 @@ const data = [
     strCategory: "Miscellaneous",
     price: "539",
     rating: " 3.8",
+    q: 1,
   },
   {
     strMealThumb: "https://www.themealdb.com/images/media/meals/1529446352.jpg",
@@ -259,6 +289,7 @@ const data = [
     strCategory: "Chicken",
     price: "556",
     rating: " 4.5",
+    q: 1,
   },
   {
     strMealThumb: "https://www.themealdb.com/images/media/meals/1550442508.jpg",
@@ -266,6 +297,7 @@ const data = [
     strCategory: "Dessert",
     price: "566",
     rating: " 1.8",
+    q: 1,
   },
   {
     strMealThumb:
@@ -274,6 +306,7 @@ const data = [
     strCategory: "Miscellaneous",
     price: "569",
     rating: " 1.6",
+    q: 1,
   },
   {
     strMealThumb:
@@ -282,6 +315,7 @@ const data = [
     strCategory: "Dessert",
     price: "576",
     rating: " 1.4",
+    q: 1,
   },
   {
     strMealThumb:
@@ -290,6 +324,7 @@ const data = [
     strCategory: "Side",
     price: "577",
     rating: " 3.1",
+    q: 1,
   },
   {
     strMealThumb:
@@ -298,6 +333,7 @@ const data = [
     strCategory: "Dessert",
     price: "589",
     rating: " 4.9",
+    q: 1,
   },
   {
     strMealThumb:
@@ -306,6 +342,7 @@ const data = [
     strCategory: "Dessert",
     price: "588",
     rating: " 1.4",
+    q: 1,
   },
   {
     strMealThumb:
@@ -314,6 +351,7 @@ const data = [
     strCategory: "Dessert",
     price: "590",
     rating: " 1.4",
+    q: 1,
   },
   {
     strMealThumb:
@@ -322,6 +360,7 @@ const data = [
     strCategory: "Beef",
     price: "598",
     rating: " 4.2",
+    q: 1,
   },
   {
     strMealThumb:
@@ -330,6 +369,7 @@ const data = [
     strCategory: "Pork",
     price: "599",
     rating: " 2.6",
+    q: 1,
   },
   {
     strMealThumb:
@@ -338,6 +378,7 @@ const data = [
     strCategory: "Chicken",
     price: "611",
     rating: " 2.4",
+    q: 1,
   },
   {
     strMealThumb:
@@ -346,6 +387,7 @@ const data = [
     strCategory: "Chicken",
     price: "616",
     rating: " 1.3",
+    q: 1,
   },
   {
     strMealThumb:
@@ -354,6 +396,7 @@ const data = [
     strCategory: "Pork",
     price: "637",
     rating: " 4.1",
+    q: 1,
   },
   {
     strMealThumb:
@@ -362,6 +405,7 @@ const data = [
     strCategory: "Beef",
     price: "655",
     rating: " 3.4",
+    q: 1,
   },
   {
     strMealThumb:
@@ -370,6 +414,7 @@ const data = [
     strCategory: "Beef",
     price: "656",
     rating: " 1.3",
+    q: 1,
   },
   {
     strMealThumb:
@@ -378,6 +423,7 @@ const data = [
     strCategory: "Beef",
     price: "658",
     rating: " 3.7",
+    q: 1,
   },
   {
     strMealThumb:
@@ -386,6 +432,7 @@ const data = [
     strCategory: "Beef",
     price: "663",
     rating: " 4.9",
+    q: 1,
   },
 ];
 

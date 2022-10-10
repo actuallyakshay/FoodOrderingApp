@@ -20,6 +20,7 @@ export default function CartTotal() {
   const { state, dispatch } = useContext(FoodContext);
   const toast = useToast();
 
+
   const total = state?.cartData.reduce((acc, elem) => {
     return (acc = acc + Number(elem?.price));
   }, 0);

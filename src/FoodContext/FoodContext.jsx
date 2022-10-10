@@ -11,6 +11,7 @@ export default function FoodContextProvider({ children }) {
     isError: false,
     cartData: [],
     cartTemp: [],
+    total :0,
   });
 
   return (

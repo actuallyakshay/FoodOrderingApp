@@ -21,18 +21,21 @@ export default function reducer(state, action) {
             return {
                 ...state,
                 cartData: [...state.cartData, action.payload],
-                cartTemp: [...state.cartTemp, action.payload]
+                cartTemp: [...state.cartTemp, action.payload],
+                total : totfun(state.cartData)
             }
         case "delete":
             return {
                 ...state,
-                cartData: deleteFunc(state.cartData, action.payload)
+                cartData: deleteFunc(state.cartData, action.payload),
+                total : totfun(state.cartData)
             };
-        // case "change_price":
-        //     return {
-        //         ...state,
-        //         cartData: changefunc(state.cartTemp, action.payload)
-        //     };
+        case "plus":
+            return {
+                ...state,
+                cartData: changefunc(state.cartData, action.payload),
+                total : totfun(state.cartData)
+            };
         case "rating_hl":
             return {
                 ...state,
@@ -62,6 +65,13 @@ export default function reducer(state, action) {
     }
 }
 
+function totfun(data) {
+    let validate = data.reduce((acc, elem) => {
+        return acc = acc + (Number(elem.price)*Number(elem.q))
+    },0)
+    return validate
+}
+
 
 function deleteFunc(data, name) {
     const validate = data.filter((elem) => {
@@ -71,16 +81,16 @@ function deleteFunc(data, name) {
 }
 
 
-// function changefunc(data, temp) {
-//     const validate = data.map((elem) => {
-//         if (elem.name === temp.name) {
-//             return { ...elem, price: Number(temp.count) * Number(elem.price) }
-//         } else {
-//             return elem
-//         }
-//     });
-//     return validate
-// }
+function changefunc(data, temp) {
+    const validate = data.map((elem) => {
+        if (elem.strMeal === temp.name) {
+            return { ...elem, q: Number(elem.q) + Number(temp.val) }
+        } else {
+            return elem
+        }
+    });
+    return validate
+}
 
 function funRL(data) {
     data.sort((a, b) => {

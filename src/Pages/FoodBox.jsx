@@ -65,10 +65,11 @@ export default function FoodBox({ elem, addCart }) {
           {
             dis
               ? toast({
-                // {
-                //   !authState.isAuth
-                // }
-                  title: `${authState.isAuth ? "Item added to cart" : "You have to login first"}`,
+                  title: `${
+                    authState.isAuth
+                      ? "Item added to cart"
+                      : "You have to login first"
+                  }`,
                   status: "success",
                   duration: 2000,
                   isClosable: true,
@@ -81,17 +82,7 @@ export default function FoodBox({ elem, addCart }) {
                 });
           }
 
-          // {
-            // 
-              // ? toast({
-              //     title: "You have to login first",
-              //     status: "error",
-              //     duration: 3000,
-              //     isClosable: false,
-              //   })
-              // :
-              handleCLick(elem);
-          // }
+          handleCLick(elem);
         }}
       >
         {dis ? "Add to Cart" : "Remove from Cart"}

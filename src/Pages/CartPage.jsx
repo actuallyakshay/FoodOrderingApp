@@ -21,17 +21,17 @@ import { DELETE_ACTION, CHANGE_PRICE } from "../FoodContext/action";
 import { FoodContext } from "../FoodContext/FoodContext";
 import Emptycart from "./EmptyCart";
 export default function CartPage() {
-  const [count, setCount] = useState(1);
-
   const { state, dispatch } = useContext(FoodContext);
   const toast = useToast();
 
-  //   useEffect(() => {}, [count]);
 
-  const handleCount = (val, name) => {
-    // setCount(count + val);
-    // dispatch(CHANGE_PRICE({ count: count + Number(val), name }));
+  const handlePlus = (val, name) => {
+    console.log("valname", val, name);
+    dispatch({ type: "plus", payload: { val, name } });
+    console.log("cartttolllll", state.total);
+    console.log("page" , state.cartData);
   };
+
 
   return state?.cartData.length < 1 ? (
     <Emptycart />
@@ -43,9 +43,9 @@ export default function CartPage() {
         mt="4"
         justifyContent={{ base: "center", md: "flex-end" }}
       >
-        <CartTotal />
+        <CartTotal  />
       </Flex>
-      {state.cartData?.map((elem) => {
+      {state.cartData?.map((elem, i) => {
         return (
           <>
             <Grid
@@ -82,7 +82,7 @@ export default function CartPage() {
                   <Text>Rating ⭐{elem.rating}</Text>
                   <br />
                   <Text fontSIze="14px" color="red">
-                    💫 {elem.price} /-
+                    💫 {elem.q * elem.price} /-
                   </Text>
                 </Flex>
               </Flex>
@@ -91,6 +91,22 @@ export default function CartPage() {
                 gap="3"
                 flexDirection={{ base: "column", md: "row" }}
               >
+                <Grid gridTemplateColumns={"repeat(3,1fr)"} gap="2">
+                  <Button
+                    onClick={() => handlePlus(-1, elem.strMeal)}
+                    colorScheme={"yellow"}
+                    disabled ={elem.q === 1}
+                  >
+                    -
+                  </Button>
+                  <Button>{elem?.q}</Button>
+                  <Button
+                    onClick={() => handlePlus(1, elem.strMeal)}
+                    colorScheme={"facebook"}
+                  >
+                    +
+                  </Button>
+                </Grid>
                 <Button
                   colorScheme="red"
                   onClick={() => {
