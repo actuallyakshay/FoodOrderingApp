@@ -54,7 +54,7 @@ Food Ordering web app link : https://foodorderingapp-eta.vercel.app/
 
 If you want to contact me, you can reach me through below handles.
 
-[![linkedin](https://img.shields.io/badge/Akshay_Rajput-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](linkedin.com/in/akshay-rajput-422794220)
+[![linkedin](https://img.shields.io/badge/Akshay_Rajput-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/akshay-rajput-422794220/)
 [![Github](https://img.shields.io/badge/Akshay_Rajput-20232A?style=for-the-badge&logo=Github&logoColor=white)](https://github.com/actuallyakshay)
 
 © 2022 Akshay Rajput
