@@ -5,8 +5,6 @@ This is the online Food Ordering web app which provides all the basic functional
 ## 🔗 Live Deployed URL
 Food Ordering web app link : https://foodorderingapp-eta.vercel.app/
 
-
-
 ## Some glimpse of user-Interface
 
 #### Home Page
