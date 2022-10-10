@@ -52,7 +52,7 @@ Food Ordering web app link : https://foodorderingapp-eta.vercel.app/
 - Can see the meal of the day and its recipe and many more. 
 
 
-
+</br>
 ## Contact
 
 If you want to contact me, you can reach me through below handles.
