@@ -12,25 +12,25 @@ Food Ordering web app link : https://foodorderingapp-eta.vercel.app/
 
 ## Some glimpse of user-Interface
 
-#### Home Page
+### Home Page
 
 ![App Screenshot](https://i.ibb.co/9svbRHM/Screenshot-259.png)
 
+</br>
 
-
-#### Trending Page
+### Trending Page
 
 ![App Screenshot](https://i.ibb.co/SVbgT92/Screenshot-260.png)
 
+</br>
 
-
-#### Login Page
+### Login Page
 
 ![App Screenshot](https://i.ibb.co/qmK3wvK/Screenshot-261.png)
 
+</br>
 
-
-#### Maal of the Day Page
+### Meal of the Day Page
 
 ![App Screenshot](https://i.ibb.co/MD4KTmk/Screenshot-262.png)
 </br>
