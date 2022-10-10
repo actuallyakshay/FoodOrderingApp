@@ -2,8 +2,13 @@
 ## 🧑‍🍳 A Online Food Ordering web Application with all the major functionality 🧑‍🍳
 
 This is the online Food Ordering web app which provides all the basic functionality which is required to order the food from any food ordering website.
+
+</br>
+
 ## 🔗 Live Deployed URL
 Food Ordering web app link : https://foodorderingapp-eta.vercel.app/
+
+</br>
 
 ## Some glimpse of user-Interface
 
@@ -28,14 +33,14 @@ Food Ordering web app link : https://foodorderingapp-eta.vercel.app/
 #### Maal of the Day Page
 
 ![App Screenshot](https://i.ibb.co/MD4KTmk/Screenshot-262.png)
-
+</br>
 ## Tech Stack used
 
  - React JS
  - Chakra-ui
  - Firebase
 
- 
+ </br>
 
 ## Features
 
